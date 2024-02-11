@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <pran>
+            <tr>
+                <th>ID</th>
+                <th>User Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </pran>
+        <tbody id="tableT"></tbody>
+        <tbody id="BodyB"></tbody>
+
+    </table>
+    <script>
+        const fetchCall = fetch('https://jsonplaceholder.typicode.com/posts'); //api call
+        console.log(fetchCall); //only for crosscheck
+        const responce = fetchCall.then((res) => res.json()).catch((err) => console.log(err));// promise
+        responce.then((res) => {
+            console.log(res);
+            document.getElementById('BodyB').innerHTML = renderTableData(res); //save data in rendertabledata
+        })
+        //map :: 
+        //.json and .JSON
+        const renderTableData = (list) => {
+            return list.map(
+                (item) =>
+                    `<tr onclick="mainFn(${item.id})">
+                    <td id="selectId">${item.id}</td>
+                    <td>${item.userId}</td>
+                    <td>${item.title}</td>
+                    <td>${item.body}</td>
+                </tr>`
+            )
+        }
+
+        function mainFn(r) {
+            responce.then((respo) => {
+                r = r - 1;
+                document.getElementById("tableT").style.display = "none";
+                document.getElementById("BodyB").innerHTML =
+                    `<tr>
+                    <td>${respo[r].id}</td>
+                    <td>${respo[r].userId}</td>
+                    <td>${respo[r].title}</td>
+                    <td>${respo[r].body}</td>
+                </tr> </br> <button onclick="refresh()" 
+                                    style="
+                                            position: absolute;
+                                            left: 50%;
+                                            right: 50%;
+                                            width: 75px;
+                                            height: 25px;
+                                            margin-top: 15px;"
+                                >Go Back
+                            </button>`;
+            })
+        }
+        function refresh() {
+            location.reload();
+        }
+    </script>
+
+</body>
+
+</html>

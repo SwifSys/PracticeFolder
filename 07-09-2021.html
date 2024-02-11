@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./Suplementy/07-09-2021.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    #btn {
+        height: 15vh;
+        width: 50vh;
+        border-radius: 100px;
+        border: none;
+        background-color: rgb(38, 255, 255, 0.5);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    #btn:hover {
+        background-color: rgb(0, 255, 255);
+        box-shadow: rgba(88, 88, 109, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p id="demo"></p>
+        <button id="btn" onclick="hello()">Click me</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        margin: 10px;
+    }
+
+    label {
+        margin-right: 15px;
+    }
+
+    .input-container {
+        display: flex;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <form action="javascript:void(0)" onsubmit="formAction()">
+        <div class="input-container">
+            <label for="firstName">FirstName</label>
+            <input type="text" id="firstName" placeholder="Enter First Name" required>
+        </div>
+        <div class="input-container">
+            <label for="lastName">LastName</label>
+            <input type="text" id="lastName" placeholder="Enter Last Name" required>
+        </div>
+        <div class="input-container">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username">
+            <p id="instUser"></p>
+        </div>
+        <div class="input-container">
+            <label for="password">Password </label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <input type="checkbox" id="visibility" onclick="visible()">
+            <label for="visibility">Show Password</label>
+        </div>
+        <div class="input-container" id="cPassInputC">
+            <label for="cpassword"> Confirm Password </label>
+            <input type="password" id="cpassword" placeholder="Confirm Password" required>
+            <p id="infoCnf"></p>
+        </div>
+        <div class="input-container">
+            <label for="email">Email-ID</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+        </div>
+        <input class="submit" type="submit" value="Submit">
+    </form>
+
+    <script>
+
+        function visible() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("cPassInputC").style.display = "none"
+            } else {
+                document.getElementById("cPassInputC").style.display = "block"
+                x.type = "password";
+            }
+        }
+        var test = "OM";
+        function formAction() {
+            console.log(test);
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var passVisib = document.getElementById("visibility").value;
+            var cpassword = document.getElementById("cpassword").value;
+            var email = document.getElementById("email").value;
+            if (username.length < 8 && username.length > 15) {
+                document.getElementById("instUser").innerHTML = "Less than 8 an gretter than 15 is not allow";
+            }
+            if (password != cpassword) {
+                alert("hello");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

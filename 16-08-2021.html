@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js String</title>
+</head>
+
+<body>
+    <h1 align="center ">Examples of Strings: </h1>
+    <hr>
+    <!-- Navigation Bar Here         -->
+    <hr>
+    <div class="flex_check">
+        <h3>String charAt():</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringCharAt()" autocomplete="off">
+                <input type="text" id="inputStringCharAt" placeholder="Enter String">
+                <input type="number" id="indexCharAt" placeholder="Index" style="width:75px">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem1" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>String Concatination:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringConcat()" autocomplete="off">
+                <input type="text" id="inputStringConcat_1" placeholder="Enter String">
+                <input type="text" id="inputStringConcat_2" placeholder="Enter String">
+                <input type="text" id="inputStringConcat_3" placeholder="Enter String">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem2" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>Casssse Convertion:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringCaseConv()" autocomplete="off">
+                <input type="text" id="inputStringCase" placeholder="Enter String">
+                <select name="InputField" id="orator">
+                    <option value="upper">Upper Case</option>
+                    <option value="lower">Lower Case</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem3" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>Slice String</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringSlice()" autocomplete="off">
+                <input type="text" id="inputSliceString" placeholder="Enter String">
+                <input type="number" id="start" placeholder="From" style="width:75px;">
+                <input type="number" id="end" placeholder="To" style="width:75px;">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem4" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>String indexof():</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringIndexOf()" autocomplete="off">
+                <input type="text" id="inputStringIndexOf" placeholder="Enter String">
+                <input type="text" id="indexIndexOf" placeholder="Index String" style="width:90px">
+                <input type="number" id="startIndexSearch" placeholder="Start From" style="width:80px">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem5" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>String replace():</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringReplace()" autocomplete="off">
+                <input type="text" id="inputStringReplace" placeholder="Enter String">
+                <select name="Replace" id="opratorReplace">
+                    <option value="replace">Replace</option>
+                    <option value="replaceall">Replace All</option>
+                </select>
+                <input type="text" id="findStingReplace" placeholder="Find What" style="width:90px">
+                <input type="text" id="replaceStringReplace" placeholder="Replace" style="width: 90px;">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem6" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <div class="flex_check">
+        <h3>String Reverse:: </h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="stringReverse()" autocomplete="off">
+                <input type="text" id="inputStringReverse" placeholder="Enter String">
+                <select name="Reverse" id="opratorReverse">
+                    <option value="reverse">Using Array</option>
+                    <option value="loop">Using Loop</option>
+                    <option value="recursion">Recursion</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem7" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function stringCharAt() {
+            var inputString = document.getElementById("inputStringCharAt").value;
+            var inputIndex = document.getElementById("indexCharAt").value;
+            var char = inputString.charAt(inputIndex);
+            length = inputString.length;
+            if (inputIndex <= (length - 1) && inputIndex >= 0) {
+                if (char === ' ') {
+                    alert(`At index ${inputIndex} the Charecter is :: ${inputString.charAt(inputIndex)} :: Space`);
+                } else {
+                    alert(`At index ${inputIndex} the Charecter is :: ${inputString.charAt(inputIndex)}`);
+                }
+            } else {
+                alert("Invalid Index");
+            }
+        }
+        function stringConcat() {
+            var inputString1 = document.getElementById("inputStringConcat_1").value;
+            var inputString2 = document.getElementById("inputStringConcat_2").value;
+            var inputString3 = document.getElementById("inputStringConcat_3").value;
+            alert(`:: ${inputString1.concat(inputString2, inputString3)}`);
+        }
+        function stringCaseConv() {
+            var inputString = document.getElementById("inputStringCase").value;
+            var checkItem = document.getElementById("orator").value;
+            function isUpperCase(str) {
+                return str === str.toUpperCase();
+            }
+            function isLowerCase(str) {
+                return str === str.toLowerCase();
+            }
+            if (checkItem == 'upper') {
+                if (isUpperCase(inputString) == true) {
+                    alert("Already Capital");
+                } else {
+                    alert(`${inputString.toUpperCase()}`)
+                }
+            } else if (checkItem == 'lower') {
+                if (isLowerCase(inputString)) {
+                    alert("Already Small");
+                } else {
+                    alert(`${inputString.toLowerCase()}`)
+                }
+            }
+        }
+        function stringSlice() {
+            var inputString = document.getElementById("inputSliceString").value;
+            var from = document.getElementById("start").value;
+            var to = document.getElementById("end").value;
+            alert(`After Slicing :: ${inputString.slice(from, to)}`);
+        }
+
+        function stringIndexOf() {
+            var inputString = document.getElementById("inputStringIndexOf").value;
+            var inputIndex = document.getElementById("indexIndexOf").value;
+            var startSearch = document.getElementById("startIndexSearch").value;
+            alert(inputString.indexOf(inputIndex, startSearch));
+        }
+        function stringReplace() {
+            var inputString = document.getElementById("inputStringReplace").value;
+            var findString = document.getElementById("findStingReplace").value;
+            var replaceStrig = document.getElementById("replaceStringReplace").value;
+            var checkItem = document.getElementById("opratorReplace").value;
+            if (checkItem == 'replace') {
+                alert(inputString.replace(findString, replaceStrig));
+                document.getElementById("displayItem6").innerHTML = `${inputString} is converted to => ${inputString.replace(findString, replaceStrig)}`;
+            } else if (checkItem == 'replaceall') {
+                alert(inputString.replaceAll(findString, replaceStrig));
+                document.getElementById("displayItem6").innerHTML = `${inputString} is converted to => ${inputString.replaceAll(findString, replaceStrig)}`;
+            }
+
+        }
+        function stringReverse() {
+            var inputString = document.getElementById("inputStringReverse").value;
+            var checkItem = document.getElementById("opratorReverse").value;
+            function reverseStringReverse(str) {
+                return str
+                    .split('')
+                    .reverse()
+                    .join('');
+            }
+            function reverseStringForLoop(str) {
+                let result = '';
+                for (let i = str.length - 1; i >= 0; i--) {
+                    result += str[i];
+                }
+                return result;
+            }
+            function reverseStringRecrsion(str) {
+                if (str === "") {
+                    return "";
+                } else {
+                    return reverseStringRecrsion(str.substr(1)) + str.charAt(0);
+                }
+            }
+            if (checkItem == "reverse") {
+                alert(reverseStringReverse(inputString));
+                document.getElementById("displayItem7").innerHTML = `${inputString} is converted to => ${inputString.replaceAll(findString, replaceStrig)}`;
+            } else if (checkItem == "loop") {
+                alert(reverseStringForLoop(inputString));
+            } else if (checkItem == "recursion") {
+                alert(reverseStringRecrsion(inputString))
+            }
+        }
+    </script>
+</body>
+
+</html>

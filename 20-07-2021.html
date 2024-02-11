@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: gray;
+        height: 1200px;
+      }
+      .position {
+        background-color: sandybrown;
+      }
+      .static {
+        position: static;
+      }
+      .relative {
+        position: relative;
+        left: 50px;
+        top: 20px;
+      }
+      .absolute {
+        position: absolute;
+        top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ********************* Static Position ********************* -->
+      <div class="static">
+        <div class="position">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            accusamus fugiat modi deserunt, temporibus fuga velit ratione sunt
+            libero tempore asperiores dolorem consequuntur odio! Consequuntur
+            velit reprehenderit dolor atque ipsum?
+          </p>
+          <p>Hey, I am Second paragraph</p>
+        </div>
+      </div>
+      <!-- ********************* Relative Position ********************* -->
+      <div class="relative">
+        <div class="position">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            accusamus fugiat modi deserunt, temporibus fuga velit ratione sunt
+            libero tempore asperiores dolorem consequuntur odio! Consequuntur
+            velit reprehenderit dolor atque ipsum?
+          </p>
+          <p>Hey, I am Second paragraph</p>
+        </div>
+      </div>
+      <!-- ********************* Static Position ********************* -->
+      <div class="absolute">
+        <div class="position">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            accusamus fugiat modi deserunt, temporibus fuga velit ratione sunt
+            libero tempore asperiores dolorem consequuntur odio! Consequuntur
+            velit reprehenderit dolor atque ipsum?
+          </p>
+          <p>Hey, I am Second paragraph</p>
+        </div>
+      </div>
+    </div>
+    <div></div>
+  </body>
+</html>

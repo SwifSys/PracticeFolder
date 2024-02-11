@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="first">Hello world</h1>
+<p id="second">this is paragraph</p>
+
+<body>
+    <script>
+        function func() {
+            var i = 0;
+            for (i; i < 10; i++) {
+                console.log(i)
+            }
+        }
+        func();
+
+        function loop() {
+            for (var test = 1; test < 10; test += 2) {
+                if (test === 7) {
+                    break;
+                }
+                console.log("hello" + test);
+            }
+        }
+        loop();
+
+        var arrayData = {
+            fname: "Sam",
+            lname: "Nick",
+            age: 20,
+            home: "Haspura"
+        }
+        var text = "";
+        for (var x in arrayData) {
+            text = text + arrayData[x] + " ";
+        }
+        console.log(text)
+        //debug ::
+        /*
+
+       */
+        function dowhileloop() {
+            var testa = 10;
+            do {
+                console.log(test2);
+                testa++;
+            } while (testa < 2);
+        }
+
+        function fact(num) {
+            if (num === 0) {
+                return 1;
+            }
+            return num * fact(num - 1);
+        }
+        var result = fact(5);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-09-2021</title>
+</head>
+
+<body>
+    <div class="class"></div>
+    <div id="id"></div>
+    <div class="i"></div>
+    <div class="love"></div>
+    <div id="rose"></div>
+    <div id="rose"></div>
+
+    <script>
+        var newDiv = document.createElement("div");
+        var value = newDiv.innerHTML = "sam";
+        var target = document.getElementById("id");
+        target.appendChild(newDiv);
+        // -------------------------------------------------
+        var div1 = document.createElement("div");
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        document.getElementsByClassName("i")[0].appendChild(div2).innerHTML = "i";
+        document.getElementsByClassName("love")[0].appendChild(div3).innerHTML = "love";
+        document.getElementById("rose").appendChild(div1).innerHTML = "rose";
+
+
+    </script>
+</body>
+
+</html>

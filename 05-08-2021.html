@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        .flex_check {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo_s"></p>
+    <div class="flex_check">
+        <form action="javascript:void(0)" onsubmit="checkif()">
+            <input type="text" id="checkif_input" placeholder="If Condition">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="flex_check">
+        <form action="javascript:void(0)" onsubmit="checkifelse()">
+            <input type="text" id="checkifelse_input" placeholder="If Else Condition">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="flex_check">
+        <form action="javascript:void(0)" onsubmit="checkColors()" id="color">
+            <input type="radio" name="color" id="red" value="red" />
+            <label for="red">Red</label>
+            <input type="radio" name="color" id="blue" value="blue" />
+            <label for="blue">Blue</label>
+            <input type="radio" name="color" id="green" value="green" />
+            <label for="green">Green</label>
+            <input type="radio" name="color" id="black" value="black" />
+            <label for="black">Black</label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="flex_check">
+        <form action="javascript:void(0)" onsubmit="checkColorsSwitch()" id="colorSwitch">
+            <input type="radio" name="colorSwitch" id="redSwitch" value="red" />
+            <label for="redSwitch">Red</label>
+            <input type="radio" name="colorSwitch" id="blueSwitch" value="blue" />
+            <label for="blueSwitch">Blue</label>
+            <input type="radio" name="colorSwitch" id="greenSwitch" value="green" />
+            <label for="greenSwitch">Green</label>
+            <input type="radio" name="colorSwitch" id="blackSwitch" value="black" />
+            <label for="blackSwitch">Black</label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function checkif() {
+            var checkifcondition = document.getElementById("checkif_input").value;
+            if (checkifcondition > 10) {
+                alert(`${checkifcondition} is gretter than 10`);
+            }
+        }
+
+        function checkifelse() {
+            var checkEvenOdd = document.getElementById("checkifelse_input").value;
+            if (checkEvenOdd % 2 === 0) {
+                alert(`${checkEvenOdd} is even number.`);
+            } else {
+                alert(`${checkEvenOdd} is odd number`);
+            }
+        }
+
+        function checkColors() {
+            var colorName = document.querySelector("#color>input[name='color']:checked").value;
+            if (colorName === 'red') {
+                alert(`You have selected ${colorName}`);
+            } else if (colorName === 'blue') {
+                alert(`You have selected ${colorName}`);
+            } else if (colorName === 'green') {
+                alert(`You have selected ${colorName}`);
+            } else if (colorName === 'black') {
+                alert(`You have selected ${colorName}`);
+            }
+        }
+        function checkColorsSwitch() {
+            var colorNameSwitch = document.querySelector("#colorSwitch>input[name='colorSwitch']:checked").value;
+            switch (colorNameSwitch) {
+                case 'red':
+                    alert(`This is ${colorNameSwitch}`);
+                    break;
+                case 'blue':
+                    alert(`This is ${colorNameSwitch}`);
+                    break;
+                case 'black':
+                    alert(`This is ${colorNameSwitch}`);
+                    break;
+                case 'green':
+                    alert(`This is ${colorNameSwitch}`);
+                    break;
+            }
+        }
+
+
+
+        // -----------------------------------------------------
+
+
+
+        var name1 = {
+            fname: "sam",
+            lname: "nick",
+            testdata1: function () {
+                return this.fname;
+            }
+        }
+        document.getElementById("demo").innerHTML = name1.testdata1();
+        fname = "sara";
+        lname = "nick";
+        function thisdata() {
+            return fname + " " + lname;
+        }
+        document.getElementById("demo_s").innerHTML = thisdata();
+
+    </script>
+</body>
+
+</html>

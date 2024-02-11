@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 
+        Types of gradient
+        1. Linear Gradient 
+            background-image: linear-gradient(angle, color1, color2, ...)
+            background-image: repeating-linear-gradient(angle, color1 %, color 2 %, ...)
+        2. Radial Gradient
+            background-image: radial-gradient(shape, color1, color2, ...)
+             background-image: repeating-radial-gradient(angle, color1 %, color 2 %, ...)
+         */
+    .linear-gradient {
+      width: 300px;
+      height: 200px;
+      background-image: linear-gradient(to right, red 50%, yellow, green, blue);
+    }
+    .repeating-linear-gradient {
+      width: 300px;
+      height: 200px;
+      background-image: repeating-linear-gradient(
+        to right,
+        red 10px,
+        yellow 30px
+      );
+    }
+    .radial-gradient {
+      width: 500px;
+      height: 200px;
+      background-image: radial-gradient(red 50px, yellow 10px, green, blue);
+    }
+    .repeating-radial-gradient {
+      width: 500px;
+      height: 200px;
+      background-image: repeating-radial-gradient(red 40px, yellow 60px);
+    }
+    .two-d-transform {
+      width: 200px;
+      height: 100px;
+      background-color: red;
+      cursor: pointer;
+      margin: 50px;
+    }
+    /* ************************ Transform ************************* */
+    .two-d-transform-translate:hover {
+      transform: translate(40px, 100px);
+    }
+    .two-d-transform-rotate:hover {
+      transform: rotate(80deg);
+    }
+    .two-d-transform-scaleX:hover {
+      transform: scaleX(1.3);
+    }
+    .two-d-transform-scaleY:hover {
+      transform: scaleY(1.4);
+    }
+    .two-d-transform-scale:hover {
+      transform: scale(1.5, 1.2);
+    }
+    .two-d-transform-skewX:hover {
+      transform: skewX(-30deg);
+    }
+    .two-d-transform-skewY:hover {
+      transform: skewY(-30deg);
+    }
+    .two-d-transform-skew:hover {
+      transform: skew(-30deg, 20deg);
+    }
+    .two-d-transform-matrix:hover {
+      transform: matrix(2, 0.3, 0.5, 1.2, 0, 0);
+    }
+  </style>
+  <body>
+    <!-- ******************* Gredient ****************** -->
+    <div class="linear-gradient"></div>
+    <div class="repeating-linear-gradient"></div>
+    <div class="radial-gradient"></div>
+    <div class="repeating-radial-gradient"></div>
+    <!--     
+        Transform
+        1. 2D Transform
+            a) translate(x-direction, y-direction):- change the position 
+            b) rotate(deg):- rotate the block
+            c) scaleX()
+            d) scaleY()
+            e) scale()
+            f) skewX()
+            g) skewY()
+            h) skew()
+            i) matrix(scaleX, skewY, skewX, scaleY, translateX, translateY )
+        2. 3D Transform 
+    -->
+    <div class="two-d-transform two-d-transform-translate">Translate</div>
+    <div class="two-d-transform two-d-transform-rotate">Rotate</div>
+    <div class="two-d-transform two-d-transform-scaleX">Scale x</div>
+    <div class="two-d-transform two-d-transform-scaleY">Scale Y</div>
+    <div class="two-d-transform two-d-transform-scale">Scale</div>
+    <div class="two-d-transform two-d-transform-skewX">Skew x</div>
+    <div class="two-d-transform two-d-transform-skewY">Skew Y</div>
+    <div class="two-d-transform two-d-transform-skew">Skew</div>
+    <div class="two-d-transform two-d-transform-matrix">Matrix</div>
+  </body>
+</html>

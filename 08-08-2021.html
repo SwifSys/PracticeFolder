@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Demo</title>
+</head>
+
+<body>
+    <div class="flex_check">
+        <h3>Adiition Substra Multiplication Division and Modulas: </h3>
+        <form action="javascript:void(0)" onsubmit="firstQns()">
+            <label for="arthimatic_1">Choose : </label>
+            <select name="arthimatic_1" id="logic_output_1">
+                <option value="sum">Addition</option>
+                <option value="sub">Substract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="modulas">Modulas</option>
+            </select>
+            <input type="number" id="first_number_1" placeholder="Enter the First Number">
+            <input type="number" id="second_number_1" placeholder="Enter the Second Number">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="flex_check">
+        <h3>Variable and Stores:</h3>
+        <form action="javascript:void(0)" onsubmit="secondQns()">
+            <p id="storedvalue"></p>
+            <input type="number" id="first_number_2" placeholder="Enter the First Number">
+            <input type="number" id="second_number_2" placeholder="Enter the Second Number">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="flex_check">
+        <h3>Check if and else condition:</h3>
+        <form action="javascript:void(0)" onsubmit="thirdQns()">
+            <p id="outputvalue"></p>
+            <input type="number" id="first_number_3" placeholder="Enter the First Number">
+            <input type="number" id="second_number_3" placeholder="Enter the Second Number">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="flex_check">
+        <h3>Adiition Substra Multiplication Division and Modulas Using Switch: </h3>
+        <form action="javascript:void(0)" onsubmit="fourthQns()">
+            <label for="arthimatic_2">Choose : </label>
+            <select name="arthimatic_2" id="logic_output_2">
+                <option value="sum">Addition</option>
+                <option value="sub">Substract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+                <option value="modulas">Modulas</option>
+            </select>
+            <input type="text" id="first_number_4" placeholder="Enter the First Number">
+            <input type="text" id="second_number_4" placeholder="Enter the Second Number">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function firstQns() {
+            var checkCondition = document.getElementById("logic_output_1").value;
+            var firstnumber = parseInt(document.getElementById("first_number_1").value);
+            var secondnumber = parseInt(document.getElementById("second_number_1").value);
+            if (checkCondition == "sum") {
+                alert(`Sum of ${firstnumber} and ${secondnumber} is ${firstnumber + secondnumber}`);
+            } else if (checkCondition == "multiply") {
+                alert(`Multiplication of ${firstnumber} and ${secondnumber} is ${firstnumber * secondnumber}`)
+            } else if (checkCondition == "divide") {
+                alert(`Division of ${firstnumber} and ${secondnumber} is ${firstnumber / secondnumber}`)
+            } else if (checkCondition == "modulas") {
+                alert(`Remainder of ${firstnumber} and ${secondnumber} is ${firstnumber % secondnumber}`)
+            } else if (checkCondition == "sub") {
+                alert(`Substration of ${firstnumber} and ${secondnumber} is ${firstnumber - secondnumber}`)
+            }
+        }
+        function secondQns() {
+            var firstnumber = parseInt(document.getElementById("first_number_2").value);
+            var secondnumber = parseInt(document.getElementById("second_number_2").value);
+            var sum = firstnumber + secondnumber;
+            alert(`This value is displayed but not stored :: ${firstnumber + secondnumber}`)
+            document.getElementById("storedvalue").innerHTML = `This value  is stored in VAR sum and displayed : ${sum}`;
+        }
+
+        function thirdQns() {
+            var firstnumber = parseInt(document.getElementById("first_number_3").value);
+            var secondnumber = parseInt(document.getElementById("second_number_3").value);
+            if (firstnumber < secondnumber) {
+                alert(`${firstnumber} is less than ${secondnumber}`);
+                document.getElementById("outputvalue").innerHTML = `Addition of ${firstnumber} and ${secondnumber} is ${firstnumber + secondnumber}`
+            } else if (firstnumber > secondnumber) {
+                alert(`${firstnumber} is gretter than ${secondnumber}`);
+                document.getElementById("outputvalue").innerHTML = `Substraction of ${firstnumber} and ${secondnumber} is ${firstnumber - secondnumber}`
+            }
+        }
+        function fourthQns() {
+            var checkCondition = document.getElementById("logic_output_2").value;
+            var firstnumber = parseFloat(document.getElementById("first_number_4").value);
+            var secondnumber = parseFloat(document.getElementById("second_number_4").value);
+            switch (checkCondition) {
+                case "sum":
+                    alert(`Sum of ${firstnumber} and ${secondnumber} is ${firstnumber + secondnumber}`);
+                    break;
+                case "multiply":
+                    alert(`Multiplication of ${firstnumber} and ${secondnumber} is ${firstnumber * secondnumber}`)
+                    break;
+                case "divide":
+                    alert(`Division of ${firstnumber} and ${secondnumber} is ${firstnumber / secondnumber}`)
+                    break;
+                case "modulas":
+                    alert(`Remainder of ${firstnumber} and ${secondnumber} is ${firstnumber % secondnumber}`)
+                    break;
+                case "sub":
+                    alert(`Substration of ${firstnumber} and ${secondnumber} is ${firstnumber - secondnumber}`)
+                    break;
+                default:
+                    alert("Not deffined")
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

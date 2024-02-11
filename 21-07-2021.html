@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Overflow</title>
+    <style>
+      body {
+        height: 1500px;
+      }
+      .basic {
+        background-color: hotpink;
+        text-align: center;
+        font-size: 50px;
+        margin: 5px;
+        padding: 10px;
+      }
+      .fixed {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+      }
+      .sticky {
+        position: sticky;
+        top: 0px;
+        text-align: center;
+        background-color: khaki;
+        margin-bottom: 10px;
+      }
+      .visible {
+        overflow: visible;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .hidden {
+        overflow: hidden;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .scroll {
+        overflow: scroll;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .auto {
+        overflow: auto;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .xscroll {
+        overflow-x: scroll;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .yscroll {
+        overflow-y: scroll;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .auto {
+        overflow: auto;
+        background-color: aqua;
+        border: 1px solid red;
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+      }
+      .firstcontainer {
+        display: flex;
+        margin-left: 50px;
+      }
+      .secondcotainer {
+        display: flex;
+        margin-top: 280px;
+        margin-left: 50px;
+      }
+      .thirdcontainer {
+        display: flex;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed">
+      <img
+        src="Black_and_White_to_Color_-_Sample_Image.jpg"
+        alt="Image"
+        class="imagesticky"
+        style="height: 100px; width: 140px"
+      />
+    </div>
+    <div class="basic">Example</div>
+    <div class="sticky">Position and Overflow</div>
+    <div class="container">
+      <div class="firstcontainer">
+        <div class="visible">
+          <h4 style="margin: 0; text-decoration: underline">Visible</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+        <div class="hidden">
+          <h4 style="margin: 0; text-decoration: underline">Hidden</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+      </div>
+      <div class="secondcotainer">
+        <div class="scroll">
+          <h4 style="margin: 0; text-decoration: underline">Scroll</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+        <div class="auto">
+          <h4 style="margin: 0; text-decoration: underline">Auto</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+      </div>
+      <div class="thirdcontainer">
+        <div class="xscroll">
+          <h4 style="margin: 0; text-decoration: underline">Scroll X</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+        <div class="yscroll">
+          <h4 style="margin: 0; text-decoration: underline">Scroll Y</h4>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sit
+          asperiores porro, ea voluptatum quia fugit quam quos esse quaerat
+          nostrum voluptate excepturi itaque aperiam fuga sed est, dolorum
+          magnam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Debitis, provident, deserunt sequi quia incidunt saepe aut ex earum
+          dolorem harum adipisci est mollitia ad nulla. Dignissimos sapiente
+          debitis voluptatum Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Harum molestiae magni, praesentium impedit, officiis ab ad totam
+          maiores explicabo alias nemo omnis tempore ratione eligendi dolorum
+          corporis expedita nostrum. Porro.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- //Taking Input from user
+        // check first year is gretter or not -->
+
+<body>
+    <script>
+        //Taking Input from user
+        var input2 = '2021-12-10';
+        var input1 = '2021-08-24'; //YYYY-MM-DD
+        console.log(input1, input2); //Printing Data
+        //converting into js base date formate..
+        const dateFrom = new Date(input1);
+        const dateTo = new Date(input2);
+        console.log(`Date Convert:: ${dateFrom},${dateTo}`);//confirming output
+        //seprating date month year of both ..
+        var day1 = dateFrom.getDate();
+        var mon1 = dateFrom.getMonth();
+        var year1 = dateFrom.getFullYear();
+        var day2 = dateTo.getDate();
+        var mon2 = dateTo.getMonth();
+        var year2 = dateTo.getFullYear();
+        console.log(day1, mon1, year1, day2, mon2, year2);
+
+        if (day2 < day1) {
+            //For March We have to take from february...
+            if (mon2 == 3) {
+                //check for leap year.. 
+                if ((year2 % 4 == 0 && year2 % 100 != 0) || (year2 % 400 == 0)) {
+                    day2 += 29;
+                } else {
+                    day2 += 28;
+                }
+            }
+            else if (mon2 == 5 || mon2 == 7 || mon2 == 10 || mon2 == 12) {
+                day2 += 30;
+            } else {
+                day2 += 31;
+            }
+            mon2 = mon2 - 1;
+        }
+        if (mon2 < mon1) {
+            mon2 += 12;
+            year2 -= 1;
+        }
+        dayDiff = day2 - day1;
+        monDiff = mon2 - mon1;
+        yearDiff = year2 - year1;
+
+        console.log(dayDiff, monDiff, yearDiff);
+        const diffDays = (dateFrom - dateTo) / (1000 * 60 * 60 * 24);
+        console.log('difference between days ' + diffDays)
+
+
+    </script>
+</body>
+
+</html

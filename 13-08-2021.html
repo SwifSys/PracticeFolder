@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13/08/2021 ::: Array</title>
+</head>
+
+<body>
+    <h1 align="center ">Examples of Array :</h1>
+    <hr>
+    <!-- Navigation Bar Here         -->
+    <hr>
+    <!----------------------------------------------------- Fill Array ------------------------------------------------------ -->
+    <div class="flex_check">
+        <h3>Fill Array:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData1" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataFill()">
+                <input type="submit" value="Pop" onclick="popDataFill()">
+                <input type="text" id="inputValue1" placeholder="Enter Value" style="width: 75px;">
+                <input type="submit" value="Fill" onclick="fillArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem1" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult1"></p>
+        </div>
+    </div>
+    <!--------------------------------------------------------- Filter Array ------------------------------------------------------>
+    <div class="flex_check">
+        <h3>Filter Array</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData2" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataFilter()">
+                <input type="submit" value="Pop" onclick="popDataFilter()">
+                <input type="text" id="inputValue2" placeholder="Enter Value" style="width: 75px;">
+                <select name="InputField" id="opratorFilter">
+                    <option value="lesser">
+                        < : LessThan </option>
+                    <option value="gretter">> : GretterThan</option>
+                    <option value="equal">= : EqualTo</option>
+                </select>
+                <input type="submit" value="Filter" onclick="filterArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem2" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult2"></p>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------- Find --------------------------------------------------------------->
+    <div class="flex_check">
+        <h3>Find Array</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData3" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataFind()">
+                <input type="submit" value="Pop" onclick="popDataFind()">
+                <input type="text" id="inputValue3" placeholder="Enter Value" style="width: 75px;">
+                <select name="InputField" id="opratorFind">
+                    <option value="lesser">
+                        < : LessThan </option>
+                    <option value="gretter">> : GretterThan</option>
+                    <option value="equal">= : EqualTo</option>
+                </select>
+                <input type="submit" value="Find" onclick="findArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem3" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult3"></p>
+        </div>
+    </div>
+    <!-- -------------------------------------------- Find Index Array ----------------------------------------------------------------------->
+    <div class="flex_check">
+        <h3>Find Index Array</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData4" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataFindIndex()">
+                <input type="submit" value="Pop" onclick="popDataFindIndex()">
+                <input type="text" id="inputValue4" placeholder="Enter Value" style="width: 75px;">
+                <select name="InputField" id="opratorFindIndex">
+                    <option value="lesser">
+                        < : LessThan </option>
+                    <option value="gretter">> : GretterThan</option>
+                    <option value="equal">= : EqualTo</option>
+                </select>
+                <input type="submit" value="Find Index" onclick="findIndexArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem4" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult4"></p>
+        </div>
+    </div>
+    <!-- -------------------------------------------- Join Array ----------------------------------------------------------------------->
+    <div class="flex_check">
+        <h3>Join Array:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData5" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataJoin()">
+                <input type="submit" value="Pop" onclick="popDataJoin()">
+                <input type="text" id="inputValue5" placeholder="Fill" style="width: 75px;">
+                <input type="submit" value="Join" onclick="joinArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem5" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult5"></p>
+        </div>
+    </div>
+    <!-- -------------------------------------------- Slice Array ----------------------------------------------------------------------->
+    <div class="flex_check">
+        <h3>Slice Array:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData6" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataSlice()">
+                <input type="submit" value="Pop" onclick="popDataSlice()">
+                <input type="text" id="inputValue6_1" placeholder="From Index" style="width: 75px;">
+                <input type="text" id="inputValue6_2" placeholder="To Index" style="width: 75px;">
+                <input type="submit" value="Slice" onclick="sliceArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem6" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult6"></p>
+        </div>
+    </div>
+    <!-- -------------------------------------------- Splice Array ----------------------------------------------------------------------->
+    <div class="flex_check">
+        <h3>Splice Array:</h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)">
+                <input type="text" id="pushData7" placeholder="Enter Arrary Push">
+                <input type="submit" value="Push" onclick="pushDataSplice()">
+                <input type="submit" value="Pop" onclick="popDataSplice()">
+                <input type="text" id="inputValue7_1" placeholder="Position" style="width: 75px;">
+                <input type="text" id="inputValue7_2" placeholder="Delete" style="width: 75px;">
+                <input type="text" id="inputValue7_3" placeholder="Array" style="width: 75px;">
+                <input type="submit" value="Push" onclick="pushDataSpliceElement()">
+                <input type="submit" value="Splice" onclick="spliceArray()">
+            </form>
+            <div>
+                <b>
+                    <p id="displayItem7" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+                    <p id="displayItem7_1" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+
+                </b>
+            </div>
+        </div>
+        <div class="computing">
+            <p id="displayResult7"></p>
+        </div>
+    </div>
+    <script>
+
+
+        const itemMainFill = [];
+        const itemMainFilter = [];
+        const itemMainFind = [];
+        const itemMainFindIndex = [];
+        const itemMainJoin = [];
+        const itemMainSlice = [];
+        const itemMainSplice = [];
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataFill() {
+            pushNumber = document.getElementById("pushData1").value;
+            itemMainFill.push(pushNumber);
+            document.getElementById("pushData1").value = "";
+            document.getElementById("displayItem1").innerHTML = `Arraey is :: ${itemMainFill}`
+        }
+        function popDataFill() {
+            itemMainFill.pop();
+            document.getElementById("displayItem1").innerHTML = `Arraey is :: ${itemMainFill}`
+        }
+        function fillArray() {
+            var itemTemp = [...itemMainFill] //Here ... means i am copying the object of the itrator or array 
+            fillItem = document.getElementById("inputValue1").value;
+            document.getElementById("displayResult1").innerHTML = `Value After Fill is:: " ${itemTemp.fill(fillItem)} "`;
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataFilter() {
+            pushNumber = document.getElementById("pushData2").value;
+            document.getElementById("pushData2").value = "";
+            itemMainFilter.push(pushNumber);
+            document.getElementById("displayItem2").innerHTML = `Arraey is :: ${itemMainFilter}`
+        }
+        function popDataFilter() {
+            itemMainFilter.pop();
+            document.getElementById("displayItem2").innerHTML = `Arraey is :: ${itemMainFilter}`
+        }
+        function filterArray() {
+            var itemTemp = [...itemMainFilter] //Here ... means i am copying the object of the itrator or array 
+            filterItem = parseInt(document.getElementById("inputValue2").value);
+            var checkItem = document.getElementById("opratorFilter").value; //Input Oprator ::
+            if (checkItem == "gretter") {
+                document.getElementById("displayResult2").innerHTML = itemTemp.filter(checkfuntion);
+                function checkfuntion(item) {
+                    return item > filterItem;
+                }
+            } else if (checkItem == "lesser") {
+                document.getElementById("displayResult2").innerHTML = itemTemp.filter(checkfuntion);
+                function checkfuntion(item) {
+                    return item < filterItem;
+                }
+            } else if (checkItem == "equal") {
+                document.getElementById("displayResult2").innerHTML = itemTemp.filter(checkfuntion);
+                function checkfuntion(item) {
+                    return item == filterItem;
+                }
+            }
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataFind() {
+            pushNumber = document.getElementById("pushData3").value;
+            document.getElementById("pushData3").value = "";
+            itemMainFind.push(pushNumber);
+            document.getElementById("displayItem3").innerHTML = `Arraey is :: ${itemMainFind}`
+        }
+        function popDataFind() {
+            itemMainFind.pop();
+            document.getElementById("displayItem3").innerHTML = `Arraey is :: ${itemMainFind}`
+        }
+        function findArray() {
+            var itemTemp = [...itemMainFind] //Here ... means i am copying the object of the itrator or array 
+            findItem = parseInt(document.getElementById("inputValue3").value);
+            var checkItem = document.getElementById("opratorFind").value; //Input Oprator ::
+            if (checkItem == "gretter") {
+                document.getElementById("displayResult3").innerHTML = itemTemp.find(checkfuntion);
+                function checkfuntion(item) {
+                    return item > findItem;
+                }
+            } else if (checkItem == "lesser") {
+                document.getElementById("displayResult3").innerHTML = itemTemp.find(checkfuntion);
+                function checkfuntion(item) {
+                    return item < findItem;
+                }
+            } else if (checkItem == "equal") {
+                document.getElementById("displayResult3").innerHTML = itemTemp.find(checkfuntion);
+                function checkfuntion(item) {
+                    return item == findItem;
+                }
+            }
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataFindIndex() {
+            pushNumber = document.getElementById("pushData4").value;
+            document.getElementById("pushData4").value = "";
+            itemMainFindIndex.push(pushNumber);
+            document.getElementById("displayItem4").innerHTML = `Arraey is :: ${itemMainFindIndex}`
+        }
+        function popDataFindIndex() {
+            itemMainFindIndex.pop();
+            document.getElementById("displayItem4").innerHTML = `Arraey is :: ${itemMainFindIndex}`
+        }
+        function findIndexArray() {
+            var itemTemp = [...itemMainFindIndex] //Here ... means i am copying the object of the itrator or array 
+            findIndexItem = parseInt(document.getElementById("inputValue4").value);
+            var checkItem = document.getElementById("opratorFindIndex").value; //Input Oprator ::
+            if (checkItem == "gretter") {
+                document.getElementById("displayResult4").innerHTML = itemTemp.findIndex(checkfuntion);
+                function checkfuntion(item) {
+                    return item > findIndexItem;
+                }
+            } else if (checkItem == "lesser") {
+                document.getElementById("displayResult4").innerHTML = itemTemp.findIndex(checkfuntion);
+                function checkfuntion(item) {
+                    return item < findIndexItem;
+                }
+            } else if (checkItem == "equal") {
+                document.getElementById("displayResult4").innerHTML = itemTemp.findIndex(checkfuntion);
+                function checkfuntion(item) {
+                    return item == findIndexItem;
+                }
+            }
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataJoin() {
+            pushNumber = document.getElementById("pushData5").value;
+            itemMainJoin.push(pushNumber);
+            document.getElementById("pushData5").value = "";
+            document.getElementById("displayItem5").innerHTML = `Arraey is :: ${itemMainJoin}`
+        }
+        function popDataJoin() {
+            itemMainJoin.pop();
+            document.getElementById("displayItem5").innerHTML = `Arraey is :: ${itemMainJoin}`
+        }
+        function joinArray() {
+            var itemTemp = [...itemMainJoin] //Here ... means i am copying the object of the itrator or array 
+            joinItem = document.getElementById("inputValue5").value;
+            document.getElementById("displayResult5").innerHTML = `Value After Fill is:: " ${itemTemp.join(joinItem)} "`;
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataSlice() {
+            pushNumber = document.getElementById("pushData6").value;
+            itemMainSlice.push(pushNumber);
+            document.getElementById("pushData6").value = "";
+            document.getElementById("displayItem6").innerHTML = `Arraey is :: ${itemMainSlice}`
+        }
+        function popDataSlice() {
+            itemMainSlice.pop();
+            document.getElementById("displayItem6").innerHTML = `Arraey is :: ${itemMainSlice}`
+        }
+        function sliceArray() {
+            var itemTemp = [...itemMainSlice] //Here ... means i am copying the object of the itrator or array 
+            fromSlice = document.getElementById("inputValue6_1").value;
+            toSlice = document.getElementById("inputValue6_2").value;
+            document.getElementById("displayResult6").innerHTML = `Value After Fill is:: " ${itemTemp.slice(fromSlice, toSlice)} "`;
+        }
+        // -------------------------------------------------------------------------------------------------------------------------------------------
+        function pushDataSplice() {
+            pushNumber = document.getElementById("pushData7").value;
+            itemMainSplice.push(pushNumber);
+            document.getElementById("pushData7").value = "";
+            document.getElementById("displayItem7").innerHTML = `Arraey is :: ${itemMainSplice}`
+        }
+        function popDataSplice() {
+            itemMainSplice.pop();
+            document.getElementById("displayItem7").innerHTML = `Arraey is :: ${itemMainSplice}`
+        }
+        const elementSplice = [];
+        function pushDataSpliceElement() {
+            pushElement = document.getElementById("inputValue7_3").value;
+            elementSplice.push(pushElement);
+            document.getElementById("inputValue7_3").value = "";
+            document.getElementById("displayItem7_1").innerHTML = `Arraey is :: ${elementSplice}`
+        }
+        function spliceArray() {
+            var itemTemp = [...itemMainSplice] //Here ... means i am copying the object of the itrator or array
+            var elementDataTemp = [...elementSplice]
+            position = document.getElementById("inputValue7_1").value;
+            deleteData = document.getElementById("inputValue7_2").value;
+            itemTemp.splice(position, deleteData, elementDataTemp);
+            document.getElementById("displayResult7").innerHTML = `Value After Splice is:: " ${itemTemp} "`;
+        }
+    </script>
+</body>
+
+</html>

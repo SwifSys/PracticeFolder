@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date: 10/08/2021</title>
+</head>
+
+<body>
+    <h1 align="center ">Examples of Recursie Function:</h1>
+    <hr>
+    <div class="flex_check">
+        <h3>Factorial of Number:: </h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="firstEg()">
+                <input type="number" id="first_number_1" placeholder="Enter the Number">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <p id="outputFirstEg" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex_check">
+        <h3>Febonacci Series:: </h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="secondEg()">
+                <input type="number" id="first_number_2" placeholder="Enter the Length">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <p id="outputSecondEg" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex_check">
+        <h3>Sum of N<sup>th</sup> natural Number using resursion:: </h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="thirdEg()">
+                <input type="number" id="first_number_3" placeholder="Enter the Size">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <p id="outputThirdEg" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex_check">
+        <h3>Palidrome Number:: </h3>
+        <div style="display: flex;">
+            <form action="javascript:void(0)" onsubmit="fourthEg()">
+                <input type="number" id="first_number_4" placeholder="Enter the Number">
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <p id="outputFourthEg" style="margin: 0;padding: 0; margin-left: 10px;"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // Example of Recursion
+
+        //First Example :: Factorial of Number..
+        function firstEg() {
+            var firstnumber = parseInt(document.getElementById("first_number_1").value);
+            //recursive 
+            function fact(num) {
+                if (num === 0) {
+                    return 1;
+                } else {
+                    return num * fact(num - 1);
+                }
+            }
+
+            alert(`Factorial of ${firstnumber} is ${fact(firstnumber)}`);
+
+            txt = "";
+            for (var i = firstnumber; i > 0; i--) {
+                if (i > 1) {
+                    txt = txt + i + " x ";
+                } else {
+                    txt = txt + i + " = " + fact(firstnumber);
+                }
+            }
+            document.getElementById("outputFirstEg").innerHTML = ` Solution is :: ${txt} `
+
+        }
+        function secondEg() {
+            var firstnumber = parseInt(document.getElementById("first_number_2").value);
+            function fibo(n) {
+                if (n == 0)
+                    return 0;
+                if (n == 1 || n == 2)
+                    return 1;
+                else
+                    return fibo(n - 1) + fibo(n - 2);
+            }
+            var txt = "";
+            var num = 0;
+            for (var i = 0; i < firstnumber; i++) {
+                txt = txt + fibo(i) + " "
+                num = num + fibo(i);
+            }
+            alert(`Sum of Fibonacci of ${firstnumber} is :: ${num}`)
+            document.getElementById("outputSecondEg").innerHTML = ` Solution is :: ${txt} `
+
+        }
+        function thirdEg() {
+            var firstnumber = parseInt(document.getElementById("first_number_3").value);
+            function natural(num) {
+                if (num <= 1) {
+                    return num;
+                } else {
+                    return num + natural(num - 1);
+                }
+            }
+            alert(`The sum of first ${firstnumber} natural number is ${natural(firstnumber)}`);
+
+            txt = "";
+            for (var i = 1; i <= firstnumber; i++) {
+                if (i < firstnumber) {
+                    txt = txt + i + " + ";
+                } else {
+                    txt = txt + i + " = " + natural(firstnumber);
+                }
+
+            }
+            document.getElementById("outputThirdEg").innerHTML = ` Solution is :: ${txt} `
+
+
+        }
+        function fourthEg() {
+            var firstnumber = parseInt(document.getElementById("first_number_4").value);
+            function palidrome(firstnumber, temp) {
+                if (firstnumber == 0) {
+                    return temp;
+                } else {
+                    temp = (temp * 10) + (firstnumber % 10);
+                }
+                return palidrome(Math.floor(firstnumber / 10), temp);
+            }
+
+            temp = palidrome(firstnumber, 0);
+            if (temp == firstnumber) {
+                alert(`The number ${firstnumber} is a Palidrome.`);
+            } else {
+                alert(`The number ${firstnumber} is a Not Palidrome.`)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

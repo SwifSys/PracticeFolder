@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation, Dropdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="menu-button-of-three-horizontal-lines.png"
+        alt="Menu"
+        class="menubtn"
+        style="width: 25px"
+      />
+      <img
+        src="FacebookLogo.svg"
+        alt="image"
+        class="image"
+        style="width: 100px"
+      />
+      <nav class="navigation">
+        <ul class="first">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Contact</a>
+            <div class="dropcontaint">
+              <a href="#">Gmail</a>
+              <a href="#">Phone Number</a>
+              <a href="#">Phone Number</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="login tooltip"
+        ><button class="btn">Login</button
+        ><span class="tooltiptext">Already User</span></a
+      >
+    </div>
+    <div class="left-menu">
+      <nav class="navigation">
+        <ul class="second">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="links">
+        <a href="#" class="signup tooltip"
+          ><button class="btn btn_margin">Login</button
+          ><span class="tooltiptext">Already User</span></a
+        >
+        <a href="#" class="signup tooltip"
+          ><button class="btn btn_margin">Signup</button
+          ><span class="tooltiptext">New Registration</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>

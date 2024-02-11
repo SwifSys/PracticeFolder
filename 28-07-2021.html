@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h4 {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: red;
+        color: white;
+        font-size: 100px;
+        text-align: center;
+      }
+      @media only screen and (max-width: 600px) {
+        body {
+          background: khaki;
+          color: red;
+          font-size: 50px;
+        }
+      }
+      @media only screen and (max-width: 1100px) and (min-width: 600px) {
+        body {
+          background: lightcoral;
+          color: green;
+          font-size: 65px;
+        }
+      }
+      @media screen and (max-width: 600px) and (orientation: landscape) {
+        body {
+          background: blue;
+        }
+      }
+      .container-flex {
+        display: flex;
+        background-color: skyblue;
+      }
+      .child {
+        background-color: whitesmoke;
+        color: red;
+        margin: 10px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media">
+      <h4>Hello World</h4>
+    </div>
+    <div class="container-flex">
+      <div class="child">1 this is the mains and the local</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+    </div>
+  </body>
+</html>

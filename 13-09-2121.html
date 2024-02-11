@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //--------- Creating Main Div ------------
+        const containerClass = document.createElement("div");
+        containerClass.className = "container";
+        document.body.appendChild(containerClass);
+        //-----------Creating Paragraph -------------
+        const paragraph = document.createElement("p");
+        paragraph.id = "paragraph";
+        containerClass.appendChild(paragraph);
+        //to search a node using below methods:: 
+        //-------------------------------------------------------------
+        //document.getElementById
+        document.getElementById("paragraph").innerHTML = "SamNick";
+        // document.getElementsByClassName
+        const divContainer = document.getElementsByClassName("container")[0];
+        // document.getElementsByTagName
+        const tagName = document.createElement("h1");
+        tagName.innerHTML = "Using getElementsByTagName";
+        divContainer.appendChild(tagName);
+        const tagID = document.getElementsByTagName("h1")[0];
+        tagID.style.color = "blue";
+        // document.querySelector
+        const querySel1 = document.createElement("h3");
+        const querySel2 = document.createElement("h3");
+        querySel1.innerHTML = "This is qureySelector 01";
+        querySel2.innerHTML = "This is qureySelector 02";
+        divContainer.append(querySel1, querySel2);
+        document.querySelector("h3").style.color = "red";
+        // document.querySelectorAll
+        const querySelAll1 = document.createElement("h4");
+        const querySelAll2 = document.createElement("h4");
+        querySelAll1.className = "qs"
+        querySelAll2.className = "qs"
+        querySelAll1.innerHTML = "This is qureySelectorAll 01";
+        querySelAll2.innerHTML = "This is qureySelectorAll 02";
+        divContainer.append(querySelAll1, querySelAll2);
+        var x = document.querySelectorAll(".qs");
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.color = "gold";
+        }
+
+        //document.createElement
+        const div = document.createElement("div");
+        div.id = "sP1";
+        div.innerHTML = "hello world"
+        //appendChild
+        divContainer.appendChild(div);
+
+    </script>
+</body>
+
+</html>

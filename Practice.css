@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://www.cashadvance6online.com/data/archive/img/4100260386.png'),
+    bottom center;
+  background-size: cover;
+}
+
+.buttonDemo {
+  border: 0px;
+  height: 100px;
+  width: 250px;
+  border-radius: 50px;
+  font-size: 20px;
+  background: rgba(163, 163, 163, 0.3);
+  backdrop-filter: blur(4px);
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+.clickME {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+  position: absolute;
+  margin: auto;
+}
+/*Pulse Effect..................*/
+.pulse {
+  height: 100px;
+  width: 250px;
+  background: linear-gradient(#8a82fb, #407ed7);
+  border-radius: 50px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: grid;
+  place-items: center;
+}
+.pulse::before,
+.pulse::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: #8a82fb;
+  border-radius: 50px;
+  opacity: 0.7;
+}
+.pulse::before {
+  animation: pulse 2s ease-out infinite;
+}
+.pulse::after {
+  animation: pulse 2s 1s ease-out infinite;
+}
+@keyframes pulse {
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+/*Media Queary...........................*/
+
+@media (max-width: 412px) {
+  .buttonDemo:active {
+    color: blue;
+    background-color: rgba(128, 83, 83, 0.533);
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0px rgb(78, 78, 78);
+  }
+}

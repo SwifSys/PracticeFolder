@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .insideContainer {
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .insideContainer sm {
+            color: blue;
+        }
+
+        .warning {
+            margin-left: 10px;
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- username
+    pincode 6 no
+    mobile 
+    email
+    password -->
+    <form action="javascript:void(0)" autocomplete="off">
+        <div class="insideContainer">
+            <label for="username">Enter UserName:: </label>
+            <input type="text" name="username" id="username">
+            <span id="usernameWarning" class="warning">Use upto <sm>8</sm> digit along with <sm>Alphanumrical</sm> and
+                <sm>'.'</sm> or <sm>'_'</sm>
+            </span>
+        </div>
+        <div class="insideContainer">
+            <label for="pincode">Enter Pincode:: </label>
+            <input type="text" name="pincode" id="pincode">
+            <span id="pincodeWarning" class="warning">Use <sm>8</sm> digit <sm>Number</sm>
+            </span>
+        </div>
+        <div class="insideContainer">
+            <label for="mobile">Enter Mobile:: </label>
+            <input type="text" name="mobile" id="mobile">
+            <span id="mobileWarning" class="warning">Use <sm>10</sm> digit <sm>Number</sm>
+            </span>
+        </div>
+        <div class="insideContainer">
+            <label for="email">Enter Email:: </label>
+            <input type="text" name="email" id="email">
+            <span id="emailWarning" class="warning"> Enter correct email Id
+            </span>
+        </div>
+        <div class="insideContainer">
+            <label for="password">Enter password:: </label>
+            <input type="password" name="password" id="password">
+            <span id="passwordWarning" class="warning">Use More than <sm>8</sm> digit <sm>Alphanumrical</sm> and <sm>
+                    specical charecter</sm>
+            </span>
+        </div>
+        <div class="insideContainer">
+            <input type="submit" value="click" onclick="submitBtn()">
+        </div>
+    </form>
+</body>
+<script>
+    function submitBtn() {
+        var username = document.getElementById("username").value;
+        var pincode = document.getElementById("pincode").value;
+        var mobile = document.getElementById("mobile").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        var pattUserName = /^[a-zA-Z0-9]([._-]|[a-zA-Z0-9]){3,15}[a-zA-Z0-9_]$/g;
+        var pattPincode = /^[0-9]{6}$/;
+        var pattMobile = /^[0-9]{10}$/;
+        var pattEmail = /^([a-z0-9]{2,25})+([\_\.{1}]?[a-z0-9])+@([a-z]{2,15})+([\.{1}])([a-z]{2,3})$/g;
+        var pattPassword = /([a-zA-Z0-9\._!@#$]{3,15})/g;
+        if (pattUserName.test(username) == false) {
+            document.getElementById("usernameWarning").style.display = "block";
+        } else {
+            document.getElementById("usernameWarning").style.display = "none";
+        }
+        if (pattPincode.test(pincode) == false) {
+            document.getElementById("pincodeWarning").style.display = "block";
+        } else {
+            document.getElementById("pincodeWarning").style.display = "none";
+        }
+        if (pattMobile.test(mobile) == false) {
+            document.getElementById("mobileWarning").style.display = "block";
+        } else {
+            document.getElementById("mobileWarning").style.display = "none";
+        }
+        if (pattPassword.test(password) == false) {
+            document.getElementById("passwordWarning").style.display = "block";
+        } else {
+            document.getElementById("passwordWarning").style.display = "none";
+        }
+        if (pattEmail.test(email) == false) {
+            document.getElementById("emailWarning").style.display = "block";
+        } else {
+            document.getElementById("emailWarning").style.display = "none";
+        }
+
+
+    }
+</script>
+
+</html>

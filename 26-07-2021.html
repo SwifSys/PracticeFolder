@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown</title>
+    <style>
+      .parent {
+        background-color: azure;
+      }
+      ul {
+        display: none;
+        background-color: cyan;
+        list-style-type: none;
+        position: absolute;
+      }
+      .child:hover ul {
+        display: block;
+      }
+      .borderimagejpg {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(Black_and_White_to_Color_-_Sample_Image.jpg) 1 round;
+        /* border-image: url(border.png) 30% round; */
+      }
+      .borderimagepng {
+        border: 10px solid transparent;
+        padding: 15px;
+        /* border-image: url(Black_and_White_to_Color_-_Sample_Image.jpg) 1 round; */
+        border-image: url(border.png) 30 round;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div>Dropdown</div>
+        <ul>
+          <li>patna</li>
+          <li>delhi</li>
+          <li>banglore</li>
+          <li>pune</li>
+        </ul>
+      </div>
+    </div>
+    <p class="borderimagejpg">Hello World JPG</p>
+    <p class="borderimagepng">Hello World png</p>
+    <a>
+      <p>hello</p>
+    </a>
+  </body>
+</html>

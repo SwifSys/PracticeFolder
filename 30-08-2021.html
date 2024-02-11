@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Sir Ka tarika............
+        //*************************************************************
+        function getData(urlData) {
+            let promise = new Promise(
+                function (resolve, reject) {
+                    let request = new XMLHttpRequest();
+                    request.open("GET", urlData);
+                    request.onload = function () {
+                        if (request.status == 200) {
+                            resolve(request.response);
+                            console.log("Resopnce Data", request.response)
+                        } else {
+                            reject("error");
+                        }
+                    };
+                    request.send();
+                }
+            )
+            return promise;
+        }
+        const apiURL = "https://jsonplaceholder.typicode.com/todos/1";
+        let promise = getData(apiURL);
+        console.log(promise)
+
+        // Om Ka Taarika...............
+        // ************************************************************
+        // xmHttp = new XMLHttpRequest();
+        // xmHttp.open("GET", `https://jsonplaceholder.typicode.com/todos/1`, false)
+        // try {
+        //     xmHttp.send(null);
+        //     value = JSON.parse(xmHttp.responseText);
+        //     console.log(value);
+        // } catch (error) {
+        //     console.log(error)
+        // }
+    </script>
+</body>
+
+</html>

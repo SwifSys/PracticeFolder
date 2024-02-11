@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="setData"></h1>
+    <script>
+        const setData = document.querySelector('.setData');
+        var url = new URL(window.location.href);
+        var name = url.searchParams.get("name");
+        var age = url.searchParams.get("age");
+        if (age < 18) {
+            setData.innerHTML = `<h1>Hello, ${name} you are not authorized to visit the site.</h1>`;
+        } else {
+            setData.innerHTML = `<h1>Welcome, ${name} to the site.</h1>`;
+        }
+    </script>
+</body>
+
+
+</html>
